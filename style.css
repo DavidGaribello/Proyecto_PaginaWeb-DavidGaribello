@@ -1,5 +1,6 @@
 body {
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
 html,
@@ -26,31 +27,31 @@ body {
 
 #header {
     grid-area: header;
-    background-color: rgba(222, 145, 30, 1);
-    border: 2px rebeccapurple;
+    background-color: #1c5072;
     display: grid;
     grid-template-areas:
         "logo search-bar tools";
     grid-template-columns: 2fr 2fr 3fr;
+    height: 200px;
 }
 
 #logo {
     grid-area: logo;
-    border: 2px solid rebeccapurple;
     display: flex;
     align-items: center;
+    padding-left: 100px;
 }
 
 #logo img {
-    height: 150px;
+    height: 100px;
 }
 
 #search-bar {
     grid-area: search-bar;
-    border: 2px solid rebeccapurple;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .main-search {
@@ -63,16 +64,23 @@ body {
 
 #tools {
     grid-area: tools;
-    border: 2px solid rebeccapurple;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    place-items: center;
+    padding-right: 100px;
 }
 
-.main-tools {
+.main-tool {
+    color: aliceblue;
+    place-items: center;
+}
+
+.secondary-tools {
     color: aliceblue;
 
+    display:flex;
+    align-items: center;
+    margin-left: auto;
 }
 
 .bi-cart,
@@ -82,7 +90,8 @@ body {
 
 .bi-translate,
 .bi-question-circle {
-    font-size: 25px;
+    font-size: 20px;
+    padding: 0px 5px 0px;
 }
 
 
@@ -127,7 +136,7 @@ body {
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    margin:6px;
+    margin: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,7 +151,7 @@ body {
     margin-left: 25px;
     width: fit-content;
     height: 40px;
-    
+
 
 }
 
@@ -152,18 +161,19 @@ body {
 }
 
 /* =====PRODUCTS SECTION===== */
-#products {
+#products-section {
     grid-area: products;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 320px;
-    margin: 0px 100px 0px;
-    background-color: #F3F3F2;
+}
+.carousel-wrapper{
+
+    display:flex;
 
 }
+.carousel-track{
+    display:flex;
 
+}
 .product {
     display: grid;
     grid-template-areas:
@@ -172,12 +182,25 @@ body {
         "price price cart"
         "stars stars cart";
     grid-template-columns: 1fr 1fr 1fr;
-
-
-    width: 240px;
+    border: 2px solid rebeccapurple;
+    width: 230px;
+    flex: 0 0 230px;
     height: 320px;
-}
 
+}
+#prd-carousel{
+    display:flex;
+    border:3px solid rosybrown;
+    position:relative;
+    align-items: center;
+}
+.carousel-btn{
+    position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
 .image img {
     width: 200px;
     border-radius: 20%;
@@ -242,5 +265,94 @@ body {
 /* =====FOOTER SECTION===== */
 #footer {
     grid-area: footer;
-    border: 2px solid rebeccapurple;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+#button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+#more-information {
+    border: none;
+    cursor: pointer;
+    background-color: #F3F3F2;
+    padding: 5px 24px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#more-information.activo .arrow {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+#more-information.activo {
+    background-color: #edecec;
+}
+
+#exten-information {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4 ease-out, padding 0.4 ease;
+    background-color: #edecec;
+
+}
+
+#exten-information.activo {
+    max-height: 250px;
+    transition: max-height 0.4 ease-in;
+    padding: 20px 20px;
+}
+
+#grid-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+
+
+}
+
+#grid-cards a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+
+#grid-cards a {
+    margin-bottom: 20px;
+    color: #565656;
+    font-size: 15px;
+}
+
+#basic-information {
+    display: flex;
+    background-color: #F3F3F2;
+    padding: 20px 100px 0px;
+    gap: 20px;
+}
+
+#basic-information a {
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#company {
+    padding: 20px 100px 20px;
+    background-color: #F3F3F2;
+}
+
+#company p {
+    margin: 0%;
+    font-size: 13px;
+    color: #7a7a7a;
 }
