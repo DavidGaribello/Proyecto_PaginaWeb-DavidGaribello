@@ -13,9 +13,70 @@
     <div id="container_grid">
         <div id="header">
             <div id="logo">
-                <img src="resources/logo.png" alt="CityMark">
+                <a href="index.html"><img src="resources/logo.png" alt="CityMark"></a>
             </div>
+
             <div id="search-bar">
+                <nav class="navbar">
+                    <div class="dropdown-container" id="categoryDropdown"></div>
+                    <div id="categori">
+                        <button class="category-btn">
+                            categorías <span class="arrow"><i class="bi bi-caret-down-fill"></i></span>
+                        </button>
+                        <!-- ventana desplegable del Mega Menú -->
+                        <div class="mega-menu">
+                            <!-- Columna izquierda: Lista de categorías principales -->
+                            <ul class="category-list">
+                                <li class="category-item active" data-target="destacado">Destacado</li>
+                                <li class="category-item" data-target="Filtro-Equipo">Filtración y Equipamiento Técnico</li>
+                                <li class="category-item" data-target="Quimica-Agua">Acondicionadores y Química del Agua</li>
+                                <li class="category-item" data-target="Sustrato">Sustratos, Arenas y Hardscape</li>
+                                <li class="category-item" data-target="Alimento">Alimentación Especializada</li>
+                                <li class="category-item" data-target="Limpieza">Limpieza, Herramientas y Mantenimiento</li>
+                            </ul>
+                            <!-- Columna derecha: Paneles de subcategorías -->
+                             <div class="content-panels">
+                                <!-- Panel: Destacado -->
+                                 <div class="sub-panel active" id="destacado">
+                                    <div class="grid-items">
+                                        <a href="#" class="grid-card">
+                                            <img src="resources/Kit-Pruebas.jpg" alt="kit de pruebas">
+                                            <span>Test kits de tiras</span>
+                                        </a>
+                                        <a href="#" class="grid-card">
+                                            <img src="resources/Alimento.jpg" alt="Alimento para peces">
+                                            <span>Alimento en hojuelas</span>
+                                        </a>
+                                        <a href="#" class="grid-card">
+                                            <img src="resources/planta.webp" alt="Plantas acuáticas">
+                                            <span>Plantas para estanques</span>
+                                        </a>
+                                        <a href="#" class="grid-card">
+                                            <img src="resources/decoraciones.webp" alt="decoraciones artificiales">
+                                            <span>decoraciones artificiales</span>
+                                        </a>
+                                        <a href="#" class="grid-card">
+                                            <img src="resources/Kit-Pruebas.jpg" alt="kit de pruebas">
+                                            <span>Test kits de tiras</span>
+                                        </a>
+                                        <a href="#" class="grid-card">
+                                            <img src="resources/planta.webp" alt="Plantas acuáticas">
+                                            <span>Plantas para estanques</span>
+                                        </a>
+                                        <a href="#" class="grid-card">
+                                            <img src="resources/decoraciones.webp" alt="decoraciones artificiales">
+                                            <span>decoraciones artificiales</span>
+                                        </a>
+                                        <a href="#" class="grid-card">
+                                            <img src="resources/Alimento.jpg" alt="Alimento para peces">
+                                            <span>Alimento en hojuelas</span>
+                                        </a>
+                                    </div>
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+                </nav>
                 <input type="search" class="main-search" placeholder="  Buscar producto...">
             </div>
             <div id="tools">
@@ -23,8 +84,9 @@
                     <i class="bi bi-cart"></i>
                 </div>
                 <div class="secondary-tools">
+                    <p>notificaciones <span class="arrow"><i class="bi bi-caret-down-fill"></i></span></p>
+                    <p>favoritos <span class="arrow"><i class="bi bi-caret-down-fill"></i></span></p>
                     <i class="bi bi-question-circle"></i>
-                    <i class="bi bi-translate"></i>
                     <i class="bi bi-person-circle"></i>
                 </div>
 
@@ -44,24 +106,24 @@
                     <img src="resources/category_1.png" alt="category 1">
                 </div>
                 <div class="group_type">
-                    <img src="resources/category_2.png" alt="category 1">
+                    <img src="resources/category_2.png" alt="category 2">
 
                 </div>
                 <div class="group_type">
-                    <img src="resources/category_3.png" alt="category 1">
+                    <img src="resources/category_3.png" alt="category 3">
                 </div>
                 <div class="group_type">
-                    <img src="resources/category_4.png" alt="category 1">
+                    <img src="resources/category_4.png" alt="category 4">
                 </div>
                 <div class="group_type">
-                    <img src="resources/category_5.png" alt="category 1">
+                    <img src="resources/category_5.png" alt="category 5">
 
                 </div>
             </div>
         </div>
         <div id="products-section">
             <div class="carousel-wrapper">
-                <button class="carousel-btn" id="L"type="button"><i class="bi bi-arrow-left-short"></i></button>
+                <button class="carousel-btn" id="L" type="button"><i class="bi bi-arrow-left-short"></i></button>
                 <div id="carousel-track">
                     <div class="product">
                         <div class="image">
@@ -314,7 +376,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-btn"id="R" type="button"><i class="bi bi-arrow-right-short"></i></button>
+                <button class="carousel-btn" id="R" type="button"><i class="bi bi-arrow-right-short"></i></button>
 
             </div>
 
