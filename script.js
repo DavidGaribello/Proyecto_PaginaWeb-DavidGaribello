@@ -41,3 +41,27 @@ prevBtn.addEventListener('click', () => {
 track.addEventListener('scroll', updateArrowVisibility);
 window.addEventListener('load', updateArrowVisibility);
 window.addEventListener('resize', updateArrowVisibility);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const categoryItems = document.querySelectorAll(".category-item");
+  const subPanels = document.querySelectorAll(".sub-panel");
+
+  categoryItems.forEach(item => {
+    // Cambia al poner el mouse encima de cada elemento de la lista
+    item.addEventListener("mouseenter", () => {
+      const targetId = item.getAttribute("data-target");
+
+      // Remover clases activas de la lista
+      categoryItems.forEach(i => i.classList.remove("active"));
+      item.classList.add("active");
+
+      // Ocultar todos los paneles y mostrar el correspondiente
+      subPanels.forEach(panel => {
+        panel.classList.remove("active");
+        if (panel.id === targetId) {
+          panel.classList.add("active");
+        }
+      });
+    });
+  });
+});
