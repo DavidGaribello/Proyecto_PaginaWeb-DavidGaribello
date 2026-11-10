@@ -1,0 +1,43 @@
+body{
+    background: #e3d6c0;
+    margin:0;
+    color:#1c5072;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+.tarjeta{
+    width: min(100% - 32px,680px);
+    margin: 40px auto;
+    background: rgb(244, 246, 248);
+    padding: clamp(24px, 5vw, 44px);
+    border-radius: 20px;
+}
+h1{
+    font-size: clamp(28px, 5vw, 38px);
+    line-height:1.15;
+    margin:16px 0;
+}
+form{
+    margin-top: 28px;
+}
+.fila{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.campo{
+    margin-bottom: 20px;
+    min-width: 0;
+}
+.campo label{
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+*{
+    box-sizing: border-box;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="style_r.css">
+</head>
+
+<body>
+    <main class="tarjeta">
+        <h1>Crea tu cuenta y compra con envíos gratis</h1>
+        <form id="formulario" novalidate>
+            <div class="fila">
+                <div class="campo">
+                    <label for="nombre">Nombres</label>
+                    <input id="nombre" name="nombre" type="text" required>
+                </div>
+                <div class="campo">
+                    <label for="apellido">Apellidos</label>
+                    <input id="apellido" name="apellido" type="text" required>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="direccion">Direccion</label>
+                <input id="direccion" name="direccion" type="text" required>
+            </div>
+            <div class="campo">
+                <label for="telefono">Telefono</label>
+                <input id="telefono" name="telefono" type="text" required>
+            </div>
+            <div class="campo">
+                <label for="correo">Correo</label>
+                <input id="correo" name="correo" type="text" required>
+            </div>
+            <div class="aceptacion">
+                <label for="correo">He leido los <a href="#" target="_blank">terminos y condiciones</a></label>
+                <input id="correo" name="TyC" type="checkbox" required>
+            </div>
+            <button id="continuar" type="submit" disabled >Continuar</button>
+        </form>
+    </main>
+</body>
+
+</html>
