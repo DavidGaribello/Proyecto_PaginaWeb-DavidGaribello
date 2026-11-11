@@ -318,18 +318,13 @@ body {
     background-color: #F3F3F2;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    width: 1209px;
-
-
+    width: 1151px;
 }
 
 .carousel-wrapper {
     position: relative;
     display: flex;
     align-items: center;
-
-
-
 }
 
 #carousel-track {
@@ -337,7 +332,7 @@ body {
     overflow-x: auto;
     scroll-behavior: smooth;
     margin: 0;
-    gap: 20px;
+    gap: 10px;
     margin: 0px 20px 0px;
     scrollbar-width: none;
   
