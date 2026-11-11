@@ -34,9 +34,34 @@ form{
     margin-bottom: 6px;
     font-weight: bold;
 }
+.campo input{
+    width: 100%;
+    padding: 12px;
+    border:1px solid #22628c;
+    border-radius: 8px;
+    font:inherit;
+    color:white;
+    background: #1c5072;
+}
+::placeholder{
+    color:white;
+    opacity: 60%;
+}
+.aceptacion{
+    display:flex;
+    align-items: flex-start;
+    gap:10px;
+}
+.aceptacion input{
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    accent-color: #cda757;
+}
 a{
     color: inherit;
-    text-decoration: none;
+
 }
 *{
     box-sizing: border-box;
