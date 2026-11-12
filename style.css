@@ -20,7 +20,6 @@ body {
     grid-template-areas:
         "header"
         "promotion"
-        "category"
         "products"
         "footer";
 }
@@ -259,15 +258,12 @@ body {
 
 /* =====CATEGORY SECTION===== */
 #category {
-    grid-area: category;
     display: flex;
     align-items: center;
-    margin: 20px 100px 0px;
+    margin: 0px 100px 0px;
     background-color: #F3F3F2;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    padding-right: 30px;
-
 }
 
 .groups {
@@ -298,7 +294,6 @@ body {
 
 .select-group {
     background-color: #F3F3F2;
-    margin-left: 25px;
     width: fit-content;
     height: 40px;
 
@@ -313,16 +308,17 @@ body {
 /* =====PRODUCTS SECTION===== */
 #products-section {
     grid-area: products;
-    height: 340px;
-    margin: 0px 100px 20px;
+    height: 440px;
+    margin: 20px 100px 20px;
     background-color: #F3F3F2;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    width: 1151px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .carousel-wrapper {
-    position: relative;
     display: flex;
     align-items: center;
 }
@@ -335,9 +331,8 @@ body {
     gap: 10px;
     margin: 0px 20px 0px;
     scrollbar-width: none;
-  
-
-
+    width: 100%;
+    min-width: 0;
 }
 
 .carousel-btn {
