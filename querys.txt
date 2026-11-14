@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS Usuario(
+ id_usuario INTEGER PRIMARY KEY AUTOINCREMENT,
+ nombre TEXT CHECK (length (nombre)<=15),
+ apellido TEXT CHECK (length (apellido)<=15),
+ direccion TEXT CHECK (length (direccion)<=15),
+ telefono TEXT
+ correo TEXT CHECK (length (correo)<=50),
+ )
+
+ 

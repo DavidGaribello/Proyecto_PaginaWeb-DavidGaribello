@@ -62,7 +62,40 @@ form{
 a{
     color: inherit;
 }
-
+button{
+    display:inline-block;
+    border:none;
+    border-radius: 8px;
+    padding:14px 22px;
+    background: #4d9bd0;
+    color:white;
+    font:inherit;
+    font-weight: bold;
+    cursor:pointer;
+    text-decoration: none;
+    width:100%;
+}
+button:disabled{
+    background-color: #698da4;
+    color: rgb(200, 219, 236);
+    cursor:not-allowed;
+}
+button:enabled:hover{
+    background: #69b0df;
+}
+input.focus-visible, button:focus-visible, a:focus-visible{
+    outline:3px solid #87b4d3;
+    outline-offset: 9px;
+}
+ @media(max-width:520px){
+    .fila{
+        grid-template-columns: 1fr;
+        gap:0;
+    }
+    .tarjeta{
+        margin:20px auto;
+    }
+ }
 *{
     box-sizing: border-box;
 }

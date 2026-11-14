@@ -4,8 +4,9 @@
 <head>
     <title>Proyecto Integrador</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+
+    <script src="{{url_for('static',filename='js/script.js')}}" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
 </head>
 
@@ -13,7 +14,7 @@
     <div id="container_grid">
         <div id="header">
             <div id="logo">
-                <a href="index.html"><img src="resources/logo.png" alt="CityMark"></a>
+                <a href="index.html"><img src="{{url_for('static',filename='css/resources/logo.png')}}" alt="CityMark"></a>
             </div>
 
             <div id="search-bar">
@@ -279,13 +280,13 @@
                     <p>notificaciones <span class="arrow"><i class="bi bi-caret-down-fill"></i></span></p>
                     <p>favoritos <span class="arrow"><i class="bi bi-caret-down-fill"></i></span></p>
                     <i class="bi bi-question-circle"></i>
-                    <a href="register.html" class="user"><i class="bi bi-person-circle"></i></a>
+                    <a href="{{url_for('mostrar_registro')}}" class="user"><i class="bi bi-person-circle"></i></a>
                 </div>
 
             </div>
         </div>
         <div id="promotion">
-            <img src="resources/promocion.jpg" alt="promocion">
+            <img src="{{url_for('static',filename='css/resources/promocion.jpg')}}" alt="promocion">
         </div>
         <div id="products-section">
             <div id="category">
@@ -296,20 +297,20 @@
                 <div class="groups">
     
                     <div class="group_type">
-                        <img src="resources/category_1.png" alt="category 1">
+                        <img src="{{url_for('static',filename='css/resources/category_1.png')}}" alt="category 1">
                     </div>
                     <div class="group_type">
-                        <img src="resources/category_2.png" alt="category 2">
+                        <img src="{{url_for('static',filename='css/resources/category_2.png')}}" alt="category 2">
     
                     </div>
                     <div class="group_type">
-                        <img src="resources/category_3.png" alt="category 3">
+                        <img src="{{url_for('static',filename='css/resources/category_3.png')}}" alt="category 3">
                     </div>
                     <div class="group_type">
-                        <img src="resources/category_4.png" alt="category 4">
+                        <img src="{{url_for('static',filename='css/resources/category_4.png')}}" alt="category 4">
                     </div>
                     <div class="group_type">
-                        <img src="resources/category_5.png" alt="category 5">
+                        <img src="{{url_for('static',filename='css/resources/category_5.png')}}" alt="category 5">
     
                     </div>
                 </div>
@@ -320,7 +321,7 @@
                     <div class="product">
                         <div class="image">
 
-                            <img src="resources/product1.webp" alt="Anubias">
+                            <img src="{{url_for('static',filename='css/resources/product1.webp')}}" alt="Anubias">
                         </div>
                         <div class="name">
 
@@ -345,7 +346,7 @@
                     <div class="product">
                         <div class="image">
 
-                            <img src="resources/product1.webp" alt="Anubias">
+                            <img src="{{url_for('static',filename='css/resources/product1.webp')}}" alt="Anubias">
                         </div>
                         <div class="name">
 
@@ -370,7 +371,7 @@
                     <div class="product">
                         <div class="image">
 
-                            <img src="resources/product1.webp" alt="Anubias">
+                            <img src="{{url_for('static',filename='css/resources/product1.webp')}}" alt="Anubias">
                         </div>
                         <div class="name">
 
@@ -395,7 +396,7 @@
                     <div class="product">
                         <div class="image">
 
-                            <img src="resources/product1.webp" alt="Anubias">
+                            <img src="{{url_for('static',filename='css/resources/product1.webp')}}" alt="Anubias">
                         </div>
                         <div class="name">
 
@@ -420,7 +421,7 @@
                     <div class="product">
                         <div class="image">
 
-                            <img src="resources/product1.webp" alt="Anubias">
+                            <img src="{{url_for('static',filename='css/resources/product1.webp')}}" alt="Anubias">
                         </div>
                         <div class="name">
 
@@ -445,7 +446,7 @@
                     <div class="product">
                         <div class="image">
 
-                            <img src="resources/product1.webp" alt="Anubias">
+                            <img src="{{url_for('static',filename='css/resources/product1.webp')}}" alt="Anubias">
                         </div>
                         <div class="name">
 
@@ -470,7 +471,7 @@
                     <div class="product">
                         <div class="image">
 
-                            <img src="resources/product1.webp" alt="Anubias">
+                            <img src="{{url_for('static',filename='css/resources/product1.webp')}}" alt="Anubias">
                         </div>
                         <div class="name">
 
@@ -495,7 +496,7 @@
                     <div class="product">
                         <div class="image">
 
-                            <img src="resources/product1.webp" alt="Anubias">
+                            <img src="{{url_for('static',filename='css/resources/product1.webp')}}" alt="Anubias">
                         </div>
                         <div class="name">
 
@@ -520,7 +521,7 @@
                     <div class="product">
                         <div class="image">
 
-                            <img src="resources/product1.webp" alt="Anubias">
+                            <img src="{{url_for('static',filename='css/resources/product1.webp')}}" alt="Anubias">
                         </div>
                         <div class="name">
 
@@ -545,7 +546,7 @@
                     <div class="product">
                         <div class="image">
 
-                            <img src="resources/product1.webp" alt="Anubias">
+                            <img src="{{url_for('static',filename='css/resources/product1.webp')}}" alt="Anubias">
                         </div>
                         <div class="name">
 
