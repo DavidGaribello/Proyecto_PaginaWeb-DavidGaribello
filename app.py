@@ -9,6 +9,9 @@ BASE_DATOS=Path(__file__).with_name("database.db")
 def inicio():
     return render_template("index.html")
 
+@app.get("/carrito")
+def carrito():
+    return render_template("shop_cart.html")
 @app.get("/registro")
 def mostrar_registro():
     client_id=request.args.get("id",type=int)
@@ -36,5 +39,38 @@ def save_send():
     conexion.commit()
     conexion.close()
     return redirect(url_for("mostrar_registro",id=client_id))
+
+
+@app.get("/consultar")
+def consult():
+    client_id=request.args.get("id",type=int)
+    conexion=sqlite3.connect(BASE_DATOS)
+    cursor=conexion.cursor()
+    cursor.execute("""
+        SELECT nombre, apellido, direccion, telefono, correo
+        FROM Usuario
+        WHERE id_usuario=?
+    """, (client_id,)
+    )
+    client=cursor.fetchone()
+    conexion.commit()
+    conexion.close()
+    if client is None:
+        return render_template(
+            "register.html", error="No se encontro el usuario"
+        ),400
+    nombre, apellido, direccion, telefono, correo = client
+    return render_template(
+        "register.html",
+        client_id = client_id,
+        nombre = nombre,
+        apellido = apellido,
+        direccion = direccion,
+        telefono = telefono,
+        correo = correo,
+        usuario_encontrado = True,
+    )
+
+
 if __name__=="__main__":
     app.run(debug=True)

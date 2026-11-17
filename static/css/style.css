@@ -328,13 +328,17 @@ body {
     overflow-x: auto;
     scroll-behavior: smooth;
     margin: 0;
-    gap: 10px;
+    gap: 20px;
     margin: 0px 20px 0px;
     scrollbar-width: none;
     width: 100%;
     min-width: 0;
 }
-
+a{
+    text-decoration: none;
+    outline: none;
+    color: black;
+}
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -452,7 +456,7 @@ body {
 
 
 /* =====FOOTER SECTION===== */
-#footer {
+.footer-section{
     grid-area: footer;
     height: fit-content;
     display: grid;

@@ -14,7 +14,7 @@
     <div id="container_grid">
         <div id="header">
             <div id="logo">
-                <a href="index.html"><img src="{{url_for('static',filename='css/resources/logo.png')}}" alt="CityMark"></a>
+                <a href="{{url_for('inicio')}}"><img src="{{url_for('static',filename='css/resources/logo.png')}}" alt="UltraTank"></a>
             </div>
 
             <div id="search-bar">
@@ -318,31 +318,33 @@
             <div class="carousel-wrapper">
                 <button class="carousel-btn" id="L" type="button"><i class="bi bi-arrow-left-short"></i></button>
                 <div id="carousel-track">
-                    <div class="product">
-                        <div class="image">
-
-                            <img src="{{url_for('static',filename='css/resources/product1.webp')}}" alt="Anubias">
+                    <a href="{{url_for('carrito')}}">
+                        <div class="product">
+                            <div class="image">
+    
+                                <img src="{{url_for('static',filename='css/resources/product1.webp')}}" alt="Anubias">
+                            </div>
+                            <div class="name">
+    
+                                <p>Anubia Nana en Raíz Natural</p>
+                            </div>
+                            <div class="price">
+    
+                                <h2>$18.500</h2>
+                            </div>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="cart">
+    
+                                <i class="bi bi-cart-plus"></i>
+                            </div>
                         </div>
-                        <div class="name">
-
-                            <p>Anubia Nana en Raíz Natural</p>
-                        </div>
-                        <div class="price">
-
-                            <h2>$18.500</h2>
-                        </div>
-                        <div class="stars">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
-                        <div class="cart">
-
-                            <i class="bi bi-cart-plus"></i>
-                        </div>
-                    </div>
+                    </a>
                     <div class="product">
                         <div class="image">
 
@@ -572,7 +574,7 @@
                 <button class="carousel-btn" id="R" type="button"><i class="bi bi-arrow-right-short"></i></button>
             </div>
         </div>
-        <div id="footer">
+        <footer class="footer-section">
             <div id="button">
 
                 <button id="more-information" type="button">Mas información<span class="arrow"><i
@@ -623,7 +625,7 @@
                 <p>Carrera 78 #42A-15, Local 204, Bogotá, D.C.</p>
 
             </div>
-        </div>
+        </footer>
 
     </div>
 </body>

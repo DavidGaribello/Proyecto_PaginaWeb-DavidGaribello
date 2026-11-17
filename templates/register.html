@@ -9,7 +9,7 @@
 <body>
     <main class="tarjeta">
         <h1>Crea tu cuenta y compra con envíos gratis</h1>
-        <form id="formulario" action="{{url_for('save_send')}}"method="post">
+        <form id="formulario" action="{{url_for('save_send')}}" method="post">
             <div class="fila">
                 <div class="campo">
                     <label for="nombre">Nombres</label>
@@ -40,6 +40,25 @@
             <button id="continuar" type="submit">Continuar</button>
         </form>
     </main>
+
+    <form action="{{url_for('consult')}}" method="get">
+        <input type="hidden" name="id" value="{{cliente_id}}">
+        <button type="submit">Ver Usuario</button>
+    </form>
+
+    {%if usuario_encontrado %}
+    <h1>Usuario Encontrado</h1>
+    <ul>
+        <li>Nombre: {{nombre}}</li>
+        <li>Apellido: {{apellido}}</li>
+        <li>Direccion: {{direccion}}</li>
+        <li>Telefono: {{telefono}}</li>
+        <li>Correo: {{correo}}</li>
+    </ul> 
+    {% endif %}
+    {%if error%}
+    <p role="alert">{{error}}</p>
+    {% endif %}
 </body>
 
 </html>
