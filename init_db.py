@@ -12,5 +12,16 @@ CREATE TABLE IF NOT EXISTS Usuario(
  correo TEXT CHECK (length (correo)<=50)
  )
 """)
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS carrito (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    producto_id TEXT UNIQUE NOT NULL,
+    nombre TEXT NOT NULL,
+    precio INTEGER NOT NULL,
+    cantidad INTEGER NOT NULL DEFAULT 1,
+    seleccionado INTEGER NOT NULL DEFAULT 1,
+    imagen TEXT NOT NULL
+)
+""")
 conexion.commit()
 conexion.close()

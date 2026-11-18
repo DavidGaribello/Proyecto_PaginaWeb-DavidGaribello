@@ -65,3 +65,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const botonesCarrito = document.querySelectorAll(".product .cart");
+
+    botonesCarrito.forEach((botonCarrito) => {
+        botonCarrito.style.cursor = "pointer";
+
+        botonCarrito.addEventListener("click", async () => {
+            const tarjeta = botonCarrito.closest(".product");
+            const nombre = tarjeta.querySelector(".name p").textContent.trim();
+            const textoPrecio = tarjeta.querySelector(".price h2").textContent;
+            const precio = parseInt(textoPrecio.replace(/[^0-9]/g, ""), 10);
+            const imagen = tarjeta.querySelector(".image img").getAttribute("src");
+            const producto_id = tarjeta.dataset.id || nombre.toLowerCase().replace(/\s+/g, "-");
+
+            try {
+                const respuesta = await fetch("/api/carrito/agregar", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        producto_id: producto_id,
+                        nombre: nombre,
+                        precio: precio,
+                        imagen: imagen,
+                        cantidad: 1
+                    })
+                });
+
+                const resultado = await respuesta.json();
+                if (resultado.ok) {
+                    alert(`"${nombre}" se agregó al carrito`);
+                }
+            } catch (error) {
+                console.error("Error al agregar al carrito:", error);
+            }
+        });
+    });
+});

@@ -33,7 +33,7 @@ body {
     grid-template-areas:
         "logo search-bar tools";
     grid-template-columns: 1fr 6fr 5fr;
-    height: 90px;
+    height: 110px;
     color: aliceblue;
 }
 
@@ -42,10 +42,11 @@ body {
     display: flex;
     align-items: center;
     padding-left: 100px;
+    padding-top: 7px;
 }
 
 #logo img {
-    height: 80px;
+    height: 64px;
 }
 
 #search-bar {
@@ -218,7 +219,6 @@ body {
 }
 
 .main-tool {
-
     place-items: center;
 }
 
@@ -233,6 +233,7 @@ body {
 .bi-cart,
 .bi-person-circle {
     font-size: 50px;
+    color:#ffffff;
 }
 .user{
     color:inherit;
@@ -389,6 +390,12 @@ a{
     flex: 0 0 215px;
     height: 320px;
 }
+.product .cart{
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    pointer-events: auto;
+}
 
 .product:hover {
     transform: translateY(-3px) scale(1);
@@ -475,26 +482,26 @@ a{
 #more-information {
     border: none;
     cursor: pointer;
-    background-color: #F3F3F2;
+    background-color: #1c5072;
     padding: 5px 24px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    color: #ffffff;
 }
-
 #more-information.activo .arrow {
     display: inline-block;
     transform: rotate(180deg);
 }
 
 #more-information.activo {
-    background-color: #edecec;
+    background-color: #2b5f82;
 }
 
 #exten-information {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4 ease-out, padding 0.4 ease;
-    background-color: #edecec;
+    background-color: #2b5f82;
 
 }
 
@@ -518,18 +525,20 @@ a{
 #grid-cards a:hover {
     text-decoration: underline;
     cursor: pointer;
-
 }
 
 #grid-cards a {
     margin-bottom: 20px;
-    color: #565656;
+    color: #ffffff;;
     font-size: 15px;
+}
+#grid-cards h4{
+    color: #ffffff;
 }
 
 #basic-information {
     display: flex;
-    background-color: #F3F3F2;
+    background-color: #1c5072;
     padding: 20px 100px 0px;
     gap: 20px;
 }
@@ -537,16 +546,17 @@ a{
 #basic-information a {
     cursor: pointer;
     font-size: 13px;
+    color: #ffffff;
 }
 
 #company {
     padding: 20px 100px 20px;
-    background-color: #F3F3F2;
+    background-color: #1c5072;
 }
 
 #company p {
     margin: 0%;
     font-size: 13px;
-    color: #7a7a7a;
+    color: #6290ae;
 }
 
