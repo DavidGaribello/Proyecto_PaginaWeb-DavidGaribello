@@ -6,10 +6,10 @@ bninfo.addEventListener("click", () => {
     bninfo.classList.toggle("activo");
 });
 
-// 1. ARREGLO VACÍO (Se llenará desde database.db mediante Flask)
+// ARREGLO VACÍO (Se llenará desde database.db mediante Flask)
 let cartItems = [];
 
-// Referencias al DOM
+
 const productsContainer = document.getElementById("products-container");
 const totalItemsBadge = document.getElementById("total-items-badge");
 const selectedCountBadge = document.getElementById("selected-count-badge");
@@ -42,7 +42,7 @@ async function sincronizarItem(item) {
     });
 }
 
-// 2. FUNCIÓN DE RENDERIZADO PRINCIPAL
+// FUNCIÓN DE RENDERIZADO PRINCIPAL
 function renderCart() {
     productsContainer.innerHTML = "";
 
@@ -134,7 +134,7 @@ btnSelectAll.addEventListener("click", async () => {
     await Promise.all(cartItems.map(item => sincronizarItem(item)));
 });
 
-// 4. ACTUALIZACIÓN DE CONTADORES Y TOTALES
+// ACTUALIZACIÓN DE CONTADORES Y TOTALES
 function updateHeaderCounters() {
     const totalTypes = cartItems.length;
     const selectedTypes = cartItems.filter(item => item.selected).length;

@@ -83,9 +83,9 @@ button:disabled{
 button:enabled:hover{
     background: #69b0df;
 }
-input.focus-visible, button:focus-visible, a:focus-visible{
+input:focus-visible, button:focus-visible, a:focus-visible{
     outline:3px solid #87b4d3;
-    outline-offset: 9px;
+    outline-offset: 1px;
 }
  @media(max-width:520px){
     .fila{

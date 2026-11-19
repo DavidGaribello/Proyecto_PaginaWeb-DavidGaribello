@@ -36,11 +36,11 @@ nextBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', () => {
   track.scrollBy({ left: -1200, behavior: 'smooth' });
 });
-
 // Detectar cambios por scroll manual o tamaño de pantalla
 track.addEventListener('scroll', updateArrowVisibility);
 window.addEventListener('load', updateArrowVisibility);
 window.addEventListener('resize', updateArrowVisibility);
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const categoryItems = document.querySelectorAll(".category-item");
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
+// 1. EVENTO INICIALIZADOR DEL FLUJO DEL CARRITO
 document.addEventListener("DOMContentLoaded", () => {
     const botonesCarrito = document.querySelectorAll(".product .cart");
 
