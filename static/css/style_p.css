@@ -428,6 +428,7 @@ body {
 #more-information.activo .arrow {
     display: inline-block;
     transform: rotate(180deg);
+    transition: transform 0.3s ease;
 }
 
 #more-information.activo {

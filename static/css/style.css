@@ -67,6 +67,7 @@ body {
     position:relative;
     display: inline-block;
 }
+/* PSEUDO ELEMENTO */
 .dropdown-container::after{
     content:'';
     height: 20px;
@@ -88,7 +89,7 @@ body {
     gap:8px;
     transition:background-color 0.3s ease;
 }
-.category-btn.arroww{
+.category-btn .arroww{
     display: inline-block;
     transition: transform 0.3s ease;
 }
@@ -493,6 +494,7 @@ a{
 #more-information.activo .arrow {
     display: inline-block;
     transform: rotate(180deg);
+    transition: transform 0.3s ease;
 }
 
 #more-information.activo {

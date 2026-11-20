@@ -1,3 +1,4 @@
+// ==================MORE INFORMATION==================
 const Info=document.querySelector("#exten-information");
 const bninfo=document.querySelector("#more-information");
 
@@ -5,6 +6,8 @@ bninfo.addEventListener("click",()=>{
     Info.classList.toggle("activo");
     bninfo.classList.toggle("activo");
 });
+
+// ==================CAROUSEL-TRACK==================
 const track = document.querySelector('#carousel-track');
 const prevBtn = document.querySelector('#L');
 const nextBtn = document.querySelector('#R');
@@ -38,10 +41,10 @@ prevBtn.addEventListener('click', () => {
 });
 // Detectar cambios por scroll manual o tamaño de pantalla
 track.addEventListener('scroll', updateArrowVisibility);
-window.addEventListener('load', updateArrowVisibility);
-window.addEventListener('resize', updateArrowVisibility);
+window.addEventListener('load', updateArrowVisibility);//cargar
+window.addEventListener('resize', updateArrowVisibility);//cambiar el tamaño de la pagina
 
-
+//  ==================DROP-DOWN TAB==================
 document.addEventListener("DOMContentLoaded", () => {
   const categoryItems = document.querySelectorAll(".category-item");
   const subPanels = document.querySelectorAll(".sub-panel");
@@ -65,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-// 1. EVENTO INICIALIZADOR DEL FLUJO DEL CARRITO
+// ==================1. EVENTO INICIALIZADOR DEL FLUJO DEL CARRITO==================
 document.addEventListener("DOMContentLoaded", () => {
     const botonesCarrito = document.querySelectorAll(".product .cart");
 
@@ -78,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const textoPrecio = tarjeta.querySelector(".price h2").textContent;
             const precio = parseInt(textoPrecio.replace(/[^0-9]/g, ""), 10);
             const imagen = tarjeta.querySelector(".image img").getAttribute("src");
-            const producto_id = tarjeta.dataset.id || nombre.toLowerCase().replace(/\s+/g, "-");
+            const producto_id = nombre.toLowerCase().replace(/\s+/g, "-");
 
             try {
                 const respuesta = await fetch("/api/carrito/agregar", {
